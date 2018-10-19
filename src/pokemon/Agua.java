@@ -9,10 +9,10 @@ package pokemon;
  *
  * @author pedro
  */
-public class main {
-    public static void main(String[] args) {
-        Pokedex pokedex = new Pokedex();
-        
-        pokedex.addPokemon();
-    }
+public class Agua extends Tipo{
+    
+    String nome;
+    String vantagem;
+    String desvantagem;
+    
 }

@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Pokedex {
     
     ArrayList<Pokemon> pokemons = new ArrayList<Pokemon>();
-    int qtdPokemons;
+    int qtdPokemons = 0;
     
     public void addPokemon(){
         
@@ -44,6 +44,7 @@ public class Pokedex {
         pokemon.setNome(nome);
         
         pokemons.add(pokemon);
+        qtdPokemons++;
     }
     
 }

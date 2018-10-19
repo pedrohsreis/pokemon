@@ -9,10 +9,8 @@ package pokemon;
  *
  * @author pedro
  */
-public class main {
-    public static void main(String[] args) {
-        Pokedex pokedex = new Pokedex();
-        
-        pokedex.addPokemon();
-    }
+public class Fogo extends Tipo{
+    String nome;
+    String vantagem;
+    String desvantagem;
 }
