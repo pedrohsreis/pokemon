@@ -1,0 +1,13 @@
+Projeto Pokédex e Batalha.
+
+Pedro H. de Sá Reis e Rodrigo Oliveira Elias
+
+Descrição do projeto:
+
+	A ideia do projeto consiste em uma pokédex onde será armazenado o Pokémon com seus atributos (ataque, defesa, altura e peso), nome, pontos de vida e tipo. A ideia é apresentar um menu ao usuário e dar as seguintes opções:
+	
+		-Adicionar Pokémon: Permite ao usuário adicionar um pokémon ao indice e esse pokémon ficará registrado na pokédex.
+		-Consultar Pokédex: Apresenta uma lista enumerada de pokémons e permite ao usuário escolher um deles para obter informações mais detalhadas.
+		-Batalha: Apresenta a lista de pokémons e permite ao usuário escolher 2 pokémons para batalharem.
+
+	A batalha será implementada em turnos, sendo que quando um pokémon atacar, o valor do seu ataque será aleatório, sendo o máximo definido por seu atributo na pokédex. O mesmo será feito com o pokémon atacado, que terá sua defesa aleatoriamente definida. Se o ataque for maior que a defesa, o ataque será efetivo e o pokémon perderá pontos de vida. Se não, o ataque não será efetivo e o pokémon atacado não perderá pontos de vida.
