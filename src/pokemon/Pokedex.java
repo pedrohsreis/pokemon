@@ -16,6 +16,9 @@ public class Pokedex {
     ArrayList<Pokemon> pokemons = new ArrayList<Pokemon>();
     int qtdPokemons = 0;
     
+    /**
+     *  Método que adiciona o pokémon com seus parametros
+     */
     public void addPokemon(){
         
         Scanner scan = new Scanner(System.in);

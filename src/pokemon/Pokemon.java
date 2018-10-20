@@ -16,9 +16,21 @@ public class Pokemon {
     Atributo atributos;
     int idPokedex;
     
+    /**
+     * 
+     * @param nome seta o nome
+     */
+    
     public void setNome(String nome){
         this.nome = nome;
     }
+    /**
+     * 
+     * @param ataque seta o ataque
+     * @param defesa seta a defesa
+     * @param altura seta a altura
+     * @param peso   seta o peso
+     */
     public void setAtributos(int ataque, int defesa, float altura, float peso){
         atributos.setAtaque(ataque);
         atributos.setDefesa(defesa);
