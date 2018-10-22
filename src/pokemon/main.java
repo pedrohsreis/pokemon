@@ -12,7 +12,13 @@ package pokemon;
 public class main {
     public static void main(String[] args) {
         Pokedex pokedex = new Pokedex();
+        Batalha batalha;
         
         pokedex.addPokemon();
+        pokedex.addPokemon();
+        
+        batalha = new Batalha(pokedex.returnPokemonById(0), pokedex.returnPokemonById(1));
+        
+        batalha.batalhar();
     }
 }
