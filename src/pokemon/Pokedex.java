@@ -53,13 +53,7 @@ public class Pokedex {
         qtdPokemons++;
     }
     public Pokemon returnPokemonById(int id){
-        int i;
-        for(i = 0; i < pokemons.size(); i++){
-            if(i == id){
-                break;
-            }
-        }
-        return pokemons.get(i);
+        return pokemons.get(id);
     }
     
 }
