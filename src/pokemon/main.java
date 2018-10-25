@@ -17,8 +17,8 @@ public class main {
         Pokemon pokemon;
         int index;
         
-        pokedex.addPokemon();
-        pokedex.addPokemon();
+        pokedex.addPokemon(120, 100, 57, 90, 180);
+        pokedex.addPokemon(300, 300, 100, 120, 500);
         
         batalha = new Batalha(pokedex.returnPokemonById(0), pokedex.returnPokemonById(1));
         

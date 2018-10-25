@@ -55,5 +55,20 @@ public class Pokedex {
     public Pokemon returnPokemonById(int id){
         return pokemons.get(id);
     }
+    public void addPokemon(int ataque, int defesa, float altura, float peso, int hp){
+        
+        Scanner scan = new Scanner(System.in);
+        String nome;
+        
+        Pokemon pokemon = new Pokemon();
+        pokemon.setAtributos(ataque, defesa, altura, peso, hp, qtdPokemons);
+        
+
+        nome = scan.nextLine();
+        pokemon.setNome(nome);
+        
+        pokemons.add(pokemon);
+        qtdPokemons++;
+    }
     
 }
