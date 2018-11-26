@@ -10,7 +10,8 @@ package pokemon;
  * @author pedro
  */
 public class Eletrico extends Tipo{
+    
     String nome;
-    String vantagem;
+    String vantagem[] = {"Agua"};
     String desvantagem;
 }
