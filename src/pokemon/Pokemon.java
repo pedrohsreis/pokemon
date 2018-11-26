@@ -17,6 +17,7 @@ public class Pokemon {
     private Atributo atributos;
     private int idPokedex;
     private int hp;
+    Tipo tipo;
     
     /**
      * 
@@ -34,6 +35,8 @@ public class Pokemon {
         int hp;
         float altura;
         float peso;
+        
+        tipo = new Eletrico();
         
         Scanner scan = new Scanner(System.in);
         
