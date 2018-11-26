@@ -14,21 +14,24 @@ public class main {
         Pokedex pokedex = new Pokedex();
         Batalha batalha;
         Scanner scan = new Scanner(System.in);
-        Pokemon pokemon;
+        Pokemon pokemon1 = new Pokemon();
+        Pokemon pokemon2 = new Pokemon();
         int index;
         
-        pokedex.addPokemon(120, 100, 57, 90, 180);
-        pokedex.addPokemon(300, 300, 100, 120, 500);
+        pokedex.addPokemonPokedex(pokemon1);
+        pokedex.addPokemonPokedex(pokemon2);
         
         batalha = new Batalha(pokedex.returnPokemonById(0), pokedex.returnPokemonById(1));
         
-        batalha.batalhar();
+       
+        
+        System.out.println(batalha.batalhar());
         
         System.out.println("Digite um pokémon para pesquisar.");
         index = scan.nextInt();
         
-        pokemon = pokedex.returnPokemonById(index);
-        System.out.println(pokemon.getNome());
+        pokemon1 = pokedex.returnPokemonById(index);
+        System.out.println(pokemon1.getNome());
         
     }
 }

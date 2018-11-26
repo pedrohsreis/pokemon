@@ -25,6 +25,8 @@ public class Pokemon {
     
     Pokemon(){
         
+        atributos = new Atributo();
+        
         String nome;
         Tipo tipo;
         int ataque;
@@ -36,21 +38,23 @@ public class Pokemon {
         Scanner scan = new Scanner(System.in);
         
         System.out.println("Digite o nome do pokémon.");
-        nome = scan.nextLine();
+        this.nome = scan.nextLine();
         System.out.println("Digite o ataque.");
         ataque = scan.nextInt();
+        atributos.setAtaque(ataque);
         System.out.println("Digite a defesa.");
         defesa = scan.nextInt();
+        atributos.setDefesa(defesa);
         System.out.println("Digite a altura.");
         altura = scan.nextFloat();
+        atributos.setAltura(altura);
         System.out.println("Digite o peso.");
         peso = scan.nextFloat();
+        atributos.setPeso(peso);
         System.out.println("Digite a quantidade de pontos de vida do pokémon.");
         hp = scan.nextInt();
+        this.hp = hp;
         
-        setAtributos(ataque, defesa, altura, peso, hp);
-        
-        setNome(nome);
         
     }
     
@@ -63,6 +67,7 @@ public class Pokemon {
      * @param defesa seta a defesa
      * @param altura seta a altura
      * @param peso   seta o peso
+     * @param hp seta o hp
      */
     public void setAtributos(int ataque, int defesa, float altura, float peso, int hp){
         getAtributos().setAtaque(ataque);

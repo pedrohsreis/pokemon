@@ -84,4 +84,7 @@ public class Batalha {
         }
         return saida.toString();
     }
+    public void imprimeTurno(String saidaTurno){
+        System.out.println(saidaTurno);
+    }
 }
