@@ -12,7 +12,7 @@ package pokemon;
 public class Agua extends Tipo{
     
     String nome;
-    String vantagem;
-    String desvantagem;
+    String vantagem[] = {"Fogo", "Pedra"};
+    String desvantagem [] = {"Eletrico", "Planta"};
     
 }

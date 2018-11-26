@@ -7,11 +7,11 @@ package pokemon;
 
 /**
  *
- * @author pedro
+ * @author ice
  */
-public class Fogo extends Tipo{
+public class Planta extends Tipo{
     
     String nome;
-    String vantagem[] = {"Planta"};
-    String desvantagem[] = {"Agua", "Pedra"};
+    String vantagem []= {"Planta", "Agua"};
+    String desvantagem[] = {"Fogo"};
 }

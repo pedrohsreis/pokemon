@@ -10,7 +10,8 @@ package pokemon;
  * @author pedro
  */
 public class Pedra extends Tipo{
+    
     String nome;
-    String vantagem;
-    String desvantagem;
+    String vantagem[] = {"Fogo"};
+    String desvantagem[] = {"Agua", "Planta"};
 }
