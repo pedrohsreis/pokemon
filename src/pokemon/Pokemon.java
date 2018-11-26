@@ -5,6 +5,8 @@
  */
 package pokemon;
 
+import java.util.Scanner;
+
 /**
  *
  * @author pedro
@@ -95,5 +97,36 @@ public class Pokemon {
     public int getAtaque(){
         return atributos.getAtaque();
     }
-    
+    public void addPokemon(){
+
+        String nome;
+        Tipo tipo;
+        int ataque;
+        int defesa;
+        int hp;
+        float altura;
+        float peso;
+        
+        Scanner scan = new Scanner(system.in);
+        
+        System.out.println("Digite o nome do pokémon.");
+        nome = scan.nextLine();
+        System.out.println("Digite o ataque.");
+        ataque = scan.nextInt();
+        System.out.println("Digite a defesa.");
+        defesa = scan.nextInt();
+        System.out.println("Digite a altura.");
+        altura = scan.nextFloat();
+        System.out.println("Digite o peso.");
+        peso = scan.nextFloat();
+        System.out.println("Digite a quantidade de pontos de vida do pokémon.");
+        hp = scan.nextInt();
+        
+        setAtributos(ataque, defesa, altura, peso, hp, qtdPokemons);
+        
+        setNome(nome);
+        
+        pokemons.add(pokemon);
+        qtdPokemons++;
+    }
 }
