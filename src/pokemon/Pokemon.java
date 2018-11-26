@@ -24,7 +24,34 @@ public class Pokemon {
      */
     
     Pokemon(){
-        atributos = new Atributo();
+        
+        String nome;
+        Tipo tipo;
+        int ataque;
+        int defesa;
+        int hp;
+        float altura;
+        float peso;
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Digite o nome do pokémon.");
+        nome = scan.nextLine();
+        System.out.println("Digite o ataque.");
+        ataque = scan.nextInt();
+        System.out.println("Digite a defesa.");
+        defesa = scan.nextInt();
+        System.out.println("Digite a altura.");
+        altura = scan.nextFloat();
+        System.out.println("Digite o peso.");
+        peso = scan.nextFloat();
+        System.out.println("Digite a quantidade de pontos de vida do pokémon.");
+        hp = scan.nextInt();
+        
+        setAtributos(ataque, defesa, altura, peso, hp);
+        
+        setNome(nome);
+        
     }
     
     public void setNome(String nome){
@@ -37,13 +64,12 @@ public class Pokemon {
      * @param altura seta a altura
      * @param peso   seta o peso
      */
-    public void setAtributos(int ataque, int defesa, float altura, float peso, int hp, int id){
+    public void setAtributos(int ataque, int defesa, float altura, float peso, int hp){
         getAtributos().setAtaque(ataque);
         getAtributos().setDefesa(defesa);
         getAtributos().setAltura(altura);
         getAtributos().setPeso(peso);
         this.setHp(hp);
-        idPokedex = id;
     }
 
     /**
@@ -97,36 +123,8 @@ public class Pokemon {
     public int getAtaque(){
         return atributos.getAtaque();
     }
-    public void addPokemon(){
+    
+    public void addPokemon(Pokemon pokemon, Pokedex pokedex){
 
-        String nome;
-        Tipo tipo;
-        int ataque;
-        int defesa;
-        int hp;
-        float altura;
-        float peso;
-        
-        Scanner scan = new Scanner(system.in);
-        
-        System.out.println("Digite o nome do pokémon.");
-        nome = scan.nextLine();
-        System.out.println("Digite o ataque.");
-        ataque = scan.nextInt();
-        System.out.println("Digite a defesa.");
-        defesa = scan.nextInt();
-        System.out.println("Digite a altura.");
-        altura = scan.nextFloat();
-        System.out.println("Digite o peso.");
-        peso = scan.nextFloat();
-        System.out.println("Digite a quantidade de pontos de vida do pokémon.");
-        hp = scan.nextInt();
-        
-        setAtributos(ataque, defesa, altura, peso, hp, qtdPokemons);
-        
-        setNome(nome);
-        
-        pokemons.add(pokemon);
-        qtdPokemons++;
     }
 }
