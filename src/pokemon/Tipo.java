@@ -11,6 +11,6 @@ package pokemon;
  */
 public abstract class Tipo {
     String nome;
-    String desvantagem;
-    String vantagem;
+    String desvantagem[];
+    String vantagem[];
 }
