@@ -5,6 +5,9 @@
  */
 package InterfaceGrafica;
 
+import Jogador.Jogador;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ice
@@ -42,6 +45,11 @@ public class Jogar extends javax.swing.JPanel {
         });
 
         jButton1.setText("Cadastrar Jogadores");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Cancelar");
 
@@ -109,6 +117,14 @@ public class Jogar extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String nome1 = JOptionPane.showInputDialog(this, "Digite nome do jogador 1: ");
+        Jogador gamer1 = new Jogador(nome1);
+        String nome2 = JOptionPane.showInputDialog(this, "Digite nome do jogador 2: ");
+        Jogador gamer2 = new Jogador(nome2); 
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

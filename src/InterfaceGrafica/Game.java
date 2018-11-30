@@ -15,7 +15,7 @@ import pokemon.Pokedex;
  */
 public class Game extends javax.swing.JFrame {
 
-    static Pokedex pokedex = new Pokedex();
+    //static Pokedex pokedex = new Pokedex();
     /**
      * Creates new form Game
      */
@@ -141,13 +141,10 @@ public class Game extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:              
-        /*String nome1 = JOptionPane.showInputDialog(this, "Digite nome do pokemon 1: ");
-        pokedex.addPokemon(nome1, 120, 100, 57, 90, 180);
-        String nome2 = JOptionPane.showInputDialog(this, "Digite nome do pokemon 2: ");
-        pokedex.addPokemon(nome2, 300, 300, 100, 120, 500);
-        Batalha janela = new Batalha();
-        jDesktopPane1.add(janela);
-        janela.setVisible(true);*/
+       
+//        Batalha janela = new Batalha();
+     //   jDesktopPane1.add(janela);
+       // janela.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
