@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package pokemon;
-
+import java.io.Serializable;
 /**
  *
  * @author pedro
  */
-public abstract class Tipo {
+public abstract class Tipo implements Serializable{
 
 
     /**

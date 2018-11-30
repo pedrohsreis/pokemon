@@ -24,7 +24,7 @@ public class Pokemon implements Serializable{
      * @param nome seta o nome
      */
     
-    Pokemon(){
+    public Pokemon(){
         
         atributos = new Atributo();
         
@@ -88,14 +88,35 @@ public class Pokemon implements Serializable{
         
         
     }
-    Pokemon(String nome, int ataque, int defesa, int hp, float peso, float altura){
+    public Pokemon(String nome, String tipo, int ataque, int defesa, int hp, float peso, float altura){
         atributos = new Atributo();
         this.nome = nome;
-        this.hp = hp;
+        this.hp = 15;
         atributos.setAtaque(ataque);
         atributos.setDefesa(defesa);
         atributos.setAltura(altura);
         atributos.setPeso(peso);
+        
+        switch(tipo){
+            case "Agua":
+                this.tipo = new Agua();
+                break;
+            case "Eletrico":
+                this.tipo = new Eletrico();
+                break;
+            case "Fogo":
+                this.tipo = new Fogo();
+                break;
+            case "Pedra":
+                this.tipo = new Pedra();
+                break;
+            case "Planta":
+                this.tipo = new Planta();
+                break;
+            default:
+                this.tipo = new Pedra();
+                break;
+        }
     }
     
     public void setNome(String nome){

@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package pokemon;
-
+import java.io.Serializable;
 /**
  *
  * @author pedro
  */
-public class Fogo extends Tipo{
+public class Fogo extends Tipo implements Serializable{
     
     String nome;
     String vantagem[];

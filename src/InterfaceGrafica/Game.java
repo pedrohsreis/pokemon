@@ -6,6 +6,7 @@
 package InterfaceGrafica;
 
 import javax.swing.JOptionPane;
+import Jogador.Jogador;
 import javax.swing.JInternalFrame;
 import pokemon.Pokedex;
 

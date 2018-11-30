@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package InterfaceGrafica;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import pokemon.*;
 
 /**
  *
@@ -61,6 +65,11 @@ public class CadastroPokemon extends javax.swing.JFrame {
         });
 
         jButton1.setText("Cadastrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -173,6 +182,33 @@ public class CadastroPokemon extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        
+        int ataque, defesa;
+        float peso, altura;
+        String nome, tipo;
+        int hp = 1;
+        nome = jTextField1.getText();
+        ataque = Integer.parseInt(jTextField6.getText());
+        defesa = Integer.parseInt(jTextField5.getText());
+        altura = Float.parseFloat(jTextField3.getText());
+        peso = Float.parseFloat(jTextField2.getText());
+        tipo = jTextField4.getText();
+        
+        Pokemon pokemonAdded = new Pokemon(nome, tipo, ataque, defesa, hp, peso, altura);
+        Pokedex pokedex = new Pokedex();
+        pokedex.addPokemonPokedex(pokemonAdded);
+        try {
+            pokedex.salvar();
+        } catch (IOException ex) {
+            Logger.getLogger(CadastroPokemon.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CadastroPokemon.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

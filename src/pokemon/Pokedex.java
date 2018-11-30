@@ -32,8 +32,19 @@ public class Pokedex {
         pokemons.add(pokemon);
         qtdPokemons++;
     }
-    public void salvar() throws IOException{
-                
+    public void salvar() throws IOException, ClassNotFoundException{
+
+        
+        ArrayList<Pokemon> pokemonBackup = new ArrayList<Pokemon>();
+        
+        FileInputStream retornaArquivo = new FileInputStream("pokemon.tmp");
+        ObjectInputStream arquivoBack = new ObjectInputStream(retornaArquivo);
+        pokemonBackup = (ArrayList<Pokemon>) arquivoBack.readObject();
+        
+        for(int i = 0; i < pokemonBackup.size(); i++){
+            pokemons.add(pokemonBackup.get(i));
+        }
+        
         FileOutputStream arquivo = new FileOutputStream("pokemon.tmp");
         ObjectOutputStream arquivoob = new ObjectOutputStream(arquivo);
         arquivoob.writeObject(pokemons);

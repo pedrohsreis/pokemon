@@ -18,23 +18,28 @@ public class main {
         //Pokemon pokemon1 = new Pokemon();
         //Pokemon pokemon2 = new Pokemon();
         int index;
-        
+        Pokedex pokedex2 = new Pokedex();
 
         
         //pokedex.addPokemonPokedex(pokemon1);
         //pokedex.addPokemonPokedex(pokemon2);
         
-        //pokedex.salvar();
+       //Pokemon teste = new Pokemon("Rodolfo", "Agua", 1, 1, 1, 1, 1);
+       
+       //pokedex.addPokemonPokedex(teste);
+       //pokedex2.salvar();
+        //pokedex2.carregar();
+        
+        pokedex.salvar();
         pokedex.carregar();
         pokedex.imprimePokemons();
-        //batalha = new Batalha(pokedex.returnPokemonById(0), pokedex.returnPokemonById(1));
+        batalha = new Batalha(pokedex.returnPokemonById(0), pokedex.returnPokemonById(1));
         
-       
+        System.out.println(batalha.batalhar());
         
         //System.out.println(batalha.batalhar());
         
-        System.out.println("Digite um pokémon para pesquisar.");
-        index = scan.nextInt();
+           
         
         //pokemon1 = pokedex.returnPokemonById(index);
         //System.out.println(pokemon1.getNome());

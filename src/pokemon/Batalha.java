@@ -22,7 +22,7 @@ public class Batalha {
     
     
     
-    Batalha(Pokemon pokemon1, Pokemon pokemon2){
+    public Batalha(Pokemon pokemon1, Pokemon pokemon2){
         this.pokemon1 = pokemon1;
         this.pokemon2 = pokemon2;
         temVantagem1 = false;
@@ -61,7 +61,7 @@ public class Batalha {
                 saida.append(pokemon1.getNome());
                 saida.append(" irá atacar ");
                 saida.append(pokemon2.getNome());
-                saida.append(System.lineSeparator());
+                saida.append("\n");
                 ataque = rand.nextInt(pokemon1.getAtaque()) + 1;
                 
                 if(ataque > (pokemon1.getAtaque() / 2)){
@@ -69,19 +69,19 @@ public class Batalha {
                     if(temVantagem1 || temDesvantagem2){
                         
                         saida.append("O ataque foi efetivo.");
-                        saida.append(System.lineSeparator());
+                        saida.append("\n");
                         saida.append(pokemon2.getNome());
                         saida.append(" perdeu 7 pontos de vida.");
-                        saida.append(System.lineSeparator());
+                        saida.append("\n");
                         hp = pokemon2.getHp();
                         pokemon2.setHp(hp - 7);
                     }else{
                     
                         saida.append("O ataque foi efetivo.");
-                        saida.append(System.lineSeparator());
+                        saida.append("\n");
                         saida.append(pokemon2.getNome());
                         saida.append(" perdeu 5 pontos de vida.");
-                        saida.append(System.lineSeparator());
+                        saida.append("\n");
 
                         hp = pokemon2.getHp();
                         pokemon2.setHp(hp - 5);
@@ -90,18 +90,18 @@ public class Batalha {
                 }else{
                     
                     saida.append("O ataque não foi efetivo.");
-                    saida.append(System.lineSeparator());
+                    saida.append("\n");
                     saida.append(pokemon2.getNome());
                     saida.append(" não perdeu pontos de vida.");
-                    saida.append(System.lineSeparator());
+                    saida.append("\n");
                     
                 }
             }else{
                 
-                saida.append(System.lineSeparator());
+                saida.append("\n");
                 saida.append(pokemon1.getNome());
                 saida.append(" foi derrotado.");
-                saida.append(System.lineSeparator());
+                saida.append("\n");
                 break;
                 
             }
@@ -110,31 +110,31 @@ public class Batalha {
                 saida.append(pokemon2.getNome());
                 saida.append(" irá atacar ");
                 saida.append(pokemon1.getNome());
-                saida.append(System.lineSeparator());
+                saida.append("\n");
                 ataque = rand.nextInt(pokemon2.getAtaque()) + 1;
                 
                 if(ataque > (pokemon2.getAtaque() / 2)){
                     
                     if(temVantagem2 || temDesvantagem1){
                         saida.append("O ataque foi efetivo.");
-                        saida.append(System.lineSeparator());
+                        saida.append("\n");
                         saida.append(pokemon1.getNome());
 
                         System.out.println(" perdeu 7 pontos de vida.");
 
-                        saida.append(System.lineSeparator());
+                        saida.append("\n");
 
                         hp = pokemon1.getHp();
                         pokemon1.setHp(hp - 7);
                     }else{
                     
                         saida.append("O ataque foi efetivo.");
-                        saida.append(System.lineSeparator());
+                        saida.append("\n");
                         saida.append(pokemon1.getNome());
 
                         System.out.println(" perdeu 5 pontos de vida.");
 
-                        saida.append(System.lineSeparator());
+                        saida.append("\n");
 
                         hp = pokemon1.getHp();
                         pokemon1.setHp(hp - 5);
@@ -142,17 +142,17 @@ public class Batalha {
                 }else{
                     
                     saida.append("O ataque não foi efetivo.");
-                    saida.append(System.lineSeparator());
+                    saida.append("\n");
                     saida.append(pokemon1.getNome());
                     saida.append(" não perdeu pontos de vida.");
-                    saida.append(System.lineSeparator());
+                    saida.append("\n");
                     
                 }
             }else{
-                saida.append(System.lineSeparator());
+                saida.append("\n");
                 saida.append(pokemon2.getNome());
                 saida.append(" foi derrotado.");
-                saida.append(System.lineSeparator());
+                saida.append("\n");
                 break;
             }
         }
