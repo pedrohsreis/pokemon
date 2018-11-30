@@ -10,7 +10,13 @@ package pokemon;
  * @author pedro
  */
 public abstract class Tipo {
-    String nome;
-    String desvantagem[];
-    String vantagem[];
+
+
+    /**
+     *
+     * @return
+     */
+    public abstract String getNome();
+    public abstract String[] getDesvantagem();
+    public abstract String[] getVantagem();
 }

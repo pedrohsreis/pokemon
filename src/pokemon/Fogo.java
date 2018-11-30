@@ -12,6 +12,27 @@ package pokemon;
 public class Fogo extends Tipo{
     
     String nome;
-    String vantagem[] = {"Planta"};
-    String desvantagem[] = {"Agua", "Pedra"};
+    String vantagem[];
+    String desvantagem[];
+
+    public Fogo() {
+        this.desvantagem = new String[]{"Agua", "Pedra"};
+        this.vantagem = new String[]{"Planta"};
+        this.nome = "Fogo";
+    }
+    
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public String[] getDesvantagem() {
+        return desvantagem;
+    }
+
+    @Override
+    public String[] getVantagem() {
+        return vantagem;
+    }
 }

@@ -12,6 +12,27 @@ package pokemon;
 public class Eletrico extends Tipo{
     
     String nome;
-    String vantagem[] = {"Agua"};
-    String desvantagem;
+    String vantagem[];
+    String desvantagem[];
+
+    public Eletrico() {
+        this.nome = "Eletrico";
+        this.desvantagem = new String[]{"Pedra"};
+        this.vantagem = new String[]{"Planta"};
+    }
+    
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public String[] getDesvantagem() {
+        return desvantagem;
+    }
+
+    @Override
+    public String[] getVantagem() {
+        return vantagem;
+    }
 }

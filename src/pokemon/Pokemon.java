@@ -6,12 +6,12 @@
 package pokemon;
 
 import java.util.Scanner;
-
+import java.io.Serializable;
 /**
  *
  * @author pedro
  */
-public class Pokemon {
+public class Pokemon implements Serializable{
     
     private String nome;
     private Atributo atributos;
@@ -29,16 +29,44 @@ public class Pokemon {
         atributos = new Atributo();
         
         String nome;
-        Tipo tipo;
         int ataque;
         int defesa;
         int hp;
         float altura;
         float peso;
-        
-        tipo = new Eletrico();
-        
+        int escolherTipo;
         Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Escolha o tipo do pokémon: ");
+        System.out.println("1 - Água");
+        System.out.println("2 - Elétrico");
+        System.out.println("3 - Fogo");
+        System.out.println("4 - Pedra");
+        System.out.println("5 - Planta");
+        escolherTipo = scan.nextInt();
+        
+        switch(escolherTipo){
+            case 1:
+                tipo = new Agua();
+                break;
+            case 2:
+                tipo = new Eletrico();
+                break;
+            case 3:
+                tipo = new Fogo();
+                break;
+            case 4:
+                tipo = new Pedra();
+                break;
+            case 5:
+                tipo = new Planta();
+                break;
+            default:
+                tipo = new Pedra();
+        }
+        
+        
+        
         
         System.out.println("Digite o nome do pokémon.");
         this.nome = scan.nextLine();
@@ -59,6 +87,15 @@ public class Pokemon {
         this.hp = hp;
         
         
+    }
+    Pokemon(String nome, int ataque, int defesa, int hp, float peso, float altura){
+        atributos = new Atributo();
+        this.nome = nome;
+        this.hp = hp;
+        atributos.setAtaque(ataque);
+        atributos.setDefesa(defesa);
+        atributos.setAltura(altura);
+        atributos.setPeso(peso);
     }
     
     public void setNome(String nome){
@@ -131,8 +168,9 @@ public class Pokemon {
     public int getAtaque(){
         return atributos.getAtaque();
     }
-    
-    public void addPokemon(Pokemon pokemon, Pokedex pokedex){
-
+    public Tipo getTipo(){
+        return tipo;
     }
+    
+
 }

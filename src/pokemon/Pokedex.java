@@ -6,6 +6,11 @@
 package pokemon;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.FileOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.ObjectInputStream;
 
 /**
  *
@@ -27,5 +32,26 @@ public class Pokedex {
         pokemons.add(pokemon);
         qtdPokemons++;
     }
-    
+    public void salvar() throws IOException{
+                
+        FileOutputStream arquivo = new FileOutputStream("pokemon.tmp");
+        ObjectOutputStream arquivoob = new ObjectOutputStream(arquivo);
+        arquivoob.writeObject(pokemons);
+        arquivoob.close();
+    }
+    public void carregar() throws IOException, ClassNotFoundException{
+        pokemons.clear();
+        FileInputStream retornaArquivo = new FileInputStream("pokemon.tmp");
+        ObjectInputStream arquivoob = new ObjectInputStream(retornaArquivo);
+        pokemons = (ArrayList<Pokemon>) arquivoob.readObject();
+        arquivoob.close();
+    }
+    public void imprimePokemons(){
+        for(int i = 0; i < pokemons.size(); i++){
+            System.out.println(i + " - " + pokemons.get(i).getNome());
+        }
+    }
+    public ArrayList<Pokemon> getPokemons(){
+        return pokemons;
+    }
 }

@@ -5,11 +5,13 @@
  */
 package pokemon;
 
+import java.io.Serializable;
+
 /**
  *
  * @author pedro
  */
-public class Atributo {
+public class Atributo implements Serializable{
     private int ataque;
     private int defesa;
     private float altura;

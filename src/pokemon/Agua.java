@@ -11,8 +11,23 @@ package pokemon;
  */
 public class Agua extends Tipo{
     
-    String nome;
+    String nome = "Agua";
     String vantagem[] = {"Fogo", "Pedra"};
     String desvantagem [] = {"Eletrico", "Planta"};
+    
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public String[] getDesvantagem() {
+        return desvantagem;
+    }
+
+    @Override
+    public String[] getVantagem() {
+        return vantagem;
+    }
     
 }
