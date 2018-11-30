@@ -6,7 +6,6 @@
 package InterfaceGrafica;
 
 import javax.swing.JOptionPane;
-import Jogadores.Jogador;
 import javax.swing.JInternalFrame;
 import pokemon.Pokedex;
 
@@ -134,21 +133,21 @@ public class Game extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:                        
-        String nome1 = JOptionPane.showInputDialog(this, "Digite nome do jogador 1: ");
+       /* String nome1 = JOptionPane.showInputDialog(this, "Digite nome do jogador 1: ");
         Jogador gamer1 = new Jogador(nome1);
         String nome2 = JOptionPane.showInputDialog(this, "Digite nome do jogador 2: ");
-        Jogador gamer2 = new Jogador(nome2);        
+        Jogador gamer2 = new Jogador(nome2);   */     
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:              
-        String nome1 = JOptionPane.showInputDialog(this, "Digite nome do pokemon 1: ");
+        /*String nome1 = JOptionPane.showInputDialog(this, "Digite nome do pokemon 1: ");
         pokedex.addPokemon(nome1, 120, 100, 57, 90, 180);
         String nome2 = JOptionPane.showInputDialog(this, "Digite nome do pokemon 2: ");
         pokedex.addPokemon(nome2, 300, 300, 100, 120, 500);
         Batalha janela = new Batalha();
         jDesktopPane1.add(janela);
-        janela.setVisible(true);
+        janela.setVisible(true);*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
