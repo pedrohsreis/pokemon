@@ -120,7 +120,6 @@ public class Batalha {
                         saida.append("\n");
                         saida.append(pokemon1.getNome());
 
-                        System.out.println(" perdeu 7 pontos de vida.");
 
                         saida.append("\n");
 
@@ -132,7 +131,6 @@ public class Batalha {
                         saida.append("\n");
                         saida.append(pokemon1.getNome());
 
-                        System.out.println(" perdeu 5 pontos de vida.");
 
                         saida.append("\n");
 

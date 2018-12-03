@@ -35,9 +35,8 @@ public class main {
         pokedex.imprimePokemons();
         batalha = new Batalha(pokedex.returnPokemonById(0), pokedex.returnPokemonById(1));
         
+
         System.out.println(batalha.batalhar());
-        
-        //System.out.println(batalha.batalhar());
         
            
         

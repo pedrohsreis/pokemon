@@ -8,6 +8,7 @@ import java.io.Serializable;
 /**
  *
  * @author pedro
+ * Classe abstrata para os tipos
  */
 public abstract class Tipo implements Serializable{
 
@@ -15,6 +16,7 @@ public abstract class Tipo implements Serializable{
     /**
      *
      * @return
+     * Getters e setters a serem implementados nas classes que herdam Tipo
      */
     public abstract String getNome();
     public abstract String[] getDesvantagem();

@@ -15,6 +15,7 @@ import java.io.ObjectInputStream;
 /**
  *
  * @author pedro
+ * Classe pokédex, onde são armazenados os pokémons definidos pela classe Pokémon
  */
 public class Pokedex {
     
@@ -22,16 +23,26 @@ public class Pokedex {
     int qtdPokemons = 0;
     
     /**
-     *  Método que adiciona o pokémon com seus parametros
+     *  Método que retorna o pokémon e pede o id como paramêtro
      */
     
     public Pokemon returnPokemonById(int id){
         return pokemons.get(id);
     }
+    
+    /*
+    * Método utilizada para adicionar um pokémon a lista da pokédex
+    */
+    
     public void addPokemonPokedex(Pokemon pokemon){
         pokemons.add(pokemon);
         qtdPokemons++;
     }
+    
+    /*
+    * Método utilizado para salvar os dados contidos no ArrayList em um arquivo
+    */
+    
     public void salvar() throws IOException, ClassNotFoundException{
 
         
@@ -50,6 +61,11 @@ public class Pokedex {
         arquivoob.writeObject(pokemons);
         arquivoob.close();
     }
+    
+    /*
+    * Método utilizado para carregar os dados salvos no arquivo
+    */
+    
     public void carregar() throws IOException, ClassNotFoundException{
         pokemons.clear();
         FileInputStream retornaArquivo = new FileInputStream("pokemon.tmp");
@@ -57,11 +73,20 @@ public class Pokedex {
         pokemons = (ArrayList<Pokemon>) arquivoob.readObject();
         arquivoob.close();
     }
+    
+    /*
+    * Método utilizado para listar os pokémons contidos no arraylist
+    */
     public void imprimePokemons(){
         for(int i = 0; i < pokemons.size(); i++){
             System.out.println(i + " - " + pokemons.get(i).getNome());
         }
     }
+    
+    /*
+    * Método que retorna o ArrayList para utilização.
+    */
+    
     public ArrayList<Pokemon> getPokemons(){
         return pokemons;
     }

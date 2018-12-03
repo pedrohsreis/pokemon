@@ -10,6 +10,7 @@ import java.io.Serializable;
 /**
  *
  * @author pedro
+ * Classe utilizada para definir o tipo atributo, sendo Ataque, Defesa, Altura e Peso
  */
 public class Atributo implements Serializable{
     private int ataque;

@@ -10,6 +10,7 @@ import java.io.Serializable;
 /**
  *
  * @author pedro
+ * Classe Pokémon
  */
 public class Pokemon implements Serializable{
     
@@ -23,6 +24,11 @@ public class Pokemon implements Serializable{
      * 
      * @param nome seta o nome
      */
+    
+    /**
+     * 
+    * Construtor sem paramêtros, pede os dados através do teclado no console
+    */
     
     public Pokemon(){
         
@@ -88,6 +94,11 @@ public class Pokemon implements Serializable{
         
         
     }
+    
+    /*
+    * Construtor parametrizado, utilizado na interface gráfica
+    */
+    
     public Pokemon(String nome, String tipo, int ataque, int defesa, int hp, float peso, float altura){
         atributos = new Atributo();
         this.nome = nome;

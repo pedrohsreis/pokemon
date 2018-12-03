@@ -21,16 +21,29 @@ public class Pedra extends Tipo implements Serializable{
         this.desvantagem = new String[]{"Agua", "Planta"};
     }
 
+    /**
+     * Retorna o nome do tipo
+     * @return nome do tipo
+     */
+    
     @Override
     public String getNome() {
         return nome;
     }
-
+    
+    /**
+     * Retorna as desvantagens do tipo
+     * @return desvantagens
+     */
+    
     @Override
     public String[] getDesvantagem() {
         return desvantagem;
     }
-
+    /**
+     * Retorna a vantagem do tipo
+     * @return vantagem
+     */
     @Override
     public String[] getVantagem() {
         return vantagem;
